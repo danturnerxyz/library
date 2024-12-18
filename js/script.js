@@ -14,7 +14,7 @@ form.addEventListener('submit', function(ev) {
     read = read.checked
 
     if (title === '' || author === '' || isNaN(pages)) {
-        alert('Please fill in all requiered fields before submitting')
+        alert('Please fill in all required fields before submitting')
         return
     }
     addToLibrary(title, author, genre, pages, read)
@@ -28,6 +28,10 @@ function Book(title, author, genre, pages, read) {
     this.genre = genre
     this.pages = pages
     this.read = read
+}
+
+Book.prototype.toggleReadStatus = function() {
+    this.read = !this.read
 }
 
 function addToLibrary(title, author, genre, pages, read) {
@@ -79,7 +83,7 @@ tableBody.addEventListener('click', function(ev) {
 
     if (target.innerText == 'Toggle Read') {
         const index = Number(target.dataset.index)
-        myLibrary[index].read = !myLibrary[index].read
+        myLibrary[index].toggleReadStatus()
         displayBooks()
     }
 })
