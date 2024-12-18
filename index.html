@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>library</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>My Library</h1>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <table id="table">
+                <caption>Book's in my library</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Title</th>
+                        <th scope="col">Author</th>
+                        <th scope="col">Genre</th>
+                        <th scope="col">Pages</th>
+                        <th scope="col">Book Read</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>                
+                </tbody>
+            </table>
+
+            <section class="add-new-book">
+                <h2>Add New Book</h2>
+                <div class="form-container">
+                    <form name="add-book-form" id="form">
+                        <label for="book-title">Title</label>
+                        <input type="text" id="book-title" name="title">
+                        <label for="book-author">Author</label>
+                        <input type="text" id="book-author" name="author">
+                        <label for="book-genre">Genre</label>
+                        <select name="genre" id="book-genre" name="genre">
+                            <option value="fiction">Fiction</option>
+                            <option value="fantasy">Fantasy</option>
+                            <option value="fact">Fact</option>
+                            <option value="childrens">Children's Literature</option>
+                            <option value="horror">Horror</option>
+                        </select>
+                        <label for="book-page-number">Number of Pages</label>
+                        <input type="number" id="book-page-number" name="pages">
+                        <label for="book-read">I have read this book</label>
+                        <input type="checkbox" id="book-read" value="false" name="read">
+                        <button id="submit-button" type="submit">Submit</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="./js/script.js"></script>
+</body>
+</html>
